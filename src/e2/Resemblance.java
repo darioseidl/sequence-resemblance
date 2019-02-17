@@ -17,24 +17,6 @@ public class Resemblance {
         return substring1.equals(substring2) ? 1 : 0;
     }
 
-//    public int resemblance(String sequence1, String sequence2) {
-//
-//        int minLength = Math.min(sequence1.length(), sequence2.length());
-//
-//        int sum = IntStream.range(1, minLength + 1).map(i -> {
-//            String substring1 = sequence1.substring(0, i);
-//            String substring2 = sequence2.substring(0, i);
-//
-//            if (substring1.equals(substring2)) {
-//                System.out.println("same: " + substring1 + "=" + substring1);
-//                return 1;
-//            } else {
-//                System.out.println("difference: " + substring1 + "!=" + substring2);
-//                return 0;
-//            }
-//        }).sum();
-//
-//        return sum;
-//    }
+
 
 }
