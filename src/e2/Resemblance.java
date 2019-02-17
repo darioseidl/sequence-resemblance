@@ -6,18 +6,18 @@ import java.util.stream.IntStream;
 
 public class Resemblance {
 
-    public static void main(String[] args) {
-        System.out.println(resemblance("aabxcdefx", "aabcdxxxxxxxxxxxxx"));
-    }
-
-    public static int resemblance(String sequence1, String sequence2) {
+    public int resemblance(String sequence1, String sequence2) {
         return IntStream
                 .range(1, Math.min(sequence1.length(), sequence2.length()) + 1)
                 .map(i -> compareToInt(sequence1.substring(0, i), sequence2.substring(0, i)))
                 .sum();
     }
 
-//    public static int resemblance(String sequence1, String sequence2) {
+    private int compareToInt(String substring1, String substring2) {
+        return substring1.equals(substring2) ? 1 : 0;
+    }
+
+//    public int resemblance(String sequence1, String sequence2) {
 //
 //        int minLength = Math.min(sequence1.length(), sequence2.length());
 //
@@ -37,7 +37,4 @@ public class Resemblance {
 //        return sum;
 //    }
 
-    private static int compareToInt(String substring1, String substring2) {
-        return substring1.equals(substring2) ? 1 : 0;
-    }
 }
