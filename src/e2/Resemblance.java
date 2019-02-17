@@ -8,7 +8,6 @@ public class Resemblance {
 
     public static void main(String[] args) {
         System.out.println(resemblance("aabxcdefx", "aabcdxxxxxxxxxxxxx"));
-        System.out.println(resemblance("ababaa", "ababaa"));
     }
 
     public static int resemblance(String sequence1, String sequence2) {
